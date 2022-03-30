@@ -1,0 +1,283 @@
+body {
+    color: rgba(26, 26, 26, .7);
+    font-family: 'Roboto', serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+#details h1,
+footer,
+header h1 strong,
+nav {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+header {
+    color: white;
+    background-image: url(background-guitar.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#toplinks{
+    position: absolute;
+    top: 0;
+    left: 4%;
+    right: 4%;
+    font-size: 1.025em;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#toplinks a {
+    margin: 10px 2px;
+    padding: 1% calc(1.5% + 2px);
+    border-radius: 40px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+}
+
+#toplinks a:hover {
+    background-color: white;
+    color: black;
+}
+
+#menu {
+    display: none;
+    position: sticky;
+    margin-bottom: 24px;
+}
+
+#menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+header h1 {
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: normal;
+    text-align: center;
+    z-index: 1;
+}
+
+header h1 em {
+    font-size: 1.25em;
+    letter-spacing: 1px;
+}
+
+header h1 strong {
+    font-size: 4.25em;
+    letter-spacing: 2px;
+}
+
+#face{
+    text-align: center;
+    margin-bottom: auto;
+}
+
+#face img{
+    position: relative;
+    margin-top: -100px;
+    width: 150px;
+    min-width: 70px;
+    border-radius: 100%;
+    border: 5px solid white;
+}
+
+#face h2{
+    margin-top: 0px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+section {
+    margin: 40px 7%;
+    text-align: center;
+}
+
+#quote p,
+.guitar-item p {
+    line-height: 2em;
+}
+
+#quote p {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    font-weight: 200;
+    font-size: larger;
+}
+
+#quote h1 {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    font-size: 1.75em;
+    font-weight: normal;
+    color: rgba(26,26,26,.9);
+}
+
+#introduction{
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: justify;
+    font-size: larger;
+}
+
+#introduction p{
+    line-height: 1.5;
+}
+
+#details {
+    display: flex;
+    /* necessario per il design ideato */
+    flex-wrap: wrap;
+    /*********************************/
+    justify-content: space-around;
+}
+
+#details div{
+    flex-basis: 40%;
+    margin: 10px;
+}
+
+#details img {
+    margin: 24px 0px;
+    max-width: 520px;
+    min-width: 150px;
+    width: 38%;
+}
+
+.guitar-item{
+    text-align: center;
+}
+
+.guitar-item p{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 300;
+    text-align: justify;
+    font-style: normal;
+}
+
+#details h1 {
+    color: rgb(190, 118, 22);
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(199, 131, 28);
+    padding: 7px;
+    text-align: center;
+}
+
+footer p {
+    color: rgba(0, 0, 0, .8);
+    font-size: 17px;
+}
+
+@media (max-width: 1200px) {
+    p{
+        line-height: 2.1em;
+    }
+
+    section {
+        margin: 40px 50px;
+    }
+
+    #details{
+        justify-content: space-between;
+    }
+
+    #details div{
+        flex-basis: 48%;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 730px) {
+    #details {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 520px){
+    body {
+        font-size: 14px;
+    }
+    
+    header {
+        height: 300px;
+        line-height: 1.2;
+    }
+
+    #toplinks {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    header h1 strong {
+        font-size: 2em;
+        letter-spacing: 2px;
+    }
+
+    #face img{
+        width: calc(18% + 10px);
+        margin-top: -45px;
+        border-radius: 100%;
+        border: 4px solid white;
+    }
+
+    #face h2{
+        font-size: 17px;
+    }
+
+    section {
+        margin: 40px 15px;
+    }
+
+    #quote p {
+        width: 90%;
+        margin-bottom: 2em;
+    }
+    
+    #details img {
+        width: 55%;
+    }
+
+    footer p {
+        font-size: inherit;
+    }
+}
